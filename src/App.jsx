@@ -3,6 +3,10 @@ import { handleListItemAnimations, createScrollTrigger } from "./utils.js";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useLenis } from "lenis/react";
+import profileImage from "../src/assets/img/profile.jpg"; // Import the image
+import profileImage320w from "../src/assets/img/profile-320w.jpg";
+import profileImage480w from "../src/assets/img/profile-480w.jpg";
+import profileImage800w from "../src/assets/img/profile-800w.jpg";
 gsap.registerPlugin(ScrollTrigger);
 
 const App = () => {
@@ -157,9 +161,9 @@ const App = () => {
             </div>
           </ul>
 
-          <div className="flex flex-col select-none font-prata xl:leading-45 2xl:leading-70 leading-25 sm:bottom-0 sm:left-0 items-center justify-center sm:absolute sm:pl-5 mt-60 overflow-hidden">
+          <div className="flex flex-col select-none font-prata sm:leading-45 2xl:leading-70 leading-25 sm:bottom-0 sm:left-0 items-center justify-center sm:absolute sm:pl-5 mt-60 overflow-hidden">
             <div className="header overflow-hidden">
-              <h1 className="xl:text-[10.8rem] 2xl:text-[16.2rem] text-[5.1rem] animate-text">
+              <h1 className="sm:text-[10.8rem] 2xl:text-[16.2rem] text-[5.1rem] animate-text">
                 AARON
               </h1>
             </div>
@@ -224,12 +228,12 @@ const App = () => {
             <div className="z-2 overflow-hidden">
               <img
                 className="h-auto w-[20rem] slide-down 2xl:w-[30rem] object-cover object-top opacity-65"
-                src="../src/assets/img/profile.jpg"
-                srcSet="
-                  ../src/assets/img/profile-320w.jpg 320w,
-                  ../src/assets/img/profile-480w.jpg 480w,
-                  ../src/assets/img/profile-800w.jpg 800w
-                "
+                src={profileImage} // Use the imported image
+                srcSet={`
+                  ${profileImage320w} 320w,
+                  ${profileImage480w} 480w,
+                  ${profileImage800w} 800w
+                `}
                 sizes="(max-width: 640px) 20rem, 30rem"
                 alt="profile"
                 loading="lazy"
@@ -241,7 +245,7 @@ const App = () => {
               <p className="2xl:text-xl">Computer Science Major</p>
               <br className="" />
               <p className="2xl:text-xl">
-                mad crazy at <br className="xl:hidden block" />
+                mad crazy about <br className="xl:hidden block" />
                 <span className="text-2xl 2xl:text-3xl underline">
                   website development
                 </span>
