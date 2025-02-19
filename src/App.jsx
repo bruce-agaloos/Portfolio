@@ -121,7 +121,7 @@ const App = () => {
             <div className="animate-header flex flex-col sm:flex-row items-center w-full text-xs 2xl:text-lg overflow-hidden">
               <div className="overflow-hidden">
                 <span className="sm:block hidden ">
-                  web developer full-stack freelancer Hello world!
+                  full-stack developer freelancer Hello world!
                 </span>
               </div>
 
@@ -179,7 +179,7 @@ const App = () => {
             </div>
 
             <span className="sm:hidden w-[25rem] block font-lexend-zetta text-xs text-center p-4 animate-text">
-              web developer full-stack freelancer
+              full-stack developer freelancer
             </span>
           </div>
           <div className="flex gap-4 right-0 bottom-0 p-5 fixed">
