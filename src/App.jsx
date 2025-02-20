@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { handleListItemAnimations, createScrollTrigger } from "./utils.js";
+import clickSound from "../src/assets/sounds/MenuHit.wav";
+
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useLenis } from "lenis/react";
@@ -139,6 +141,11 @@ const App = () => {
     }
   }
 
+  const playSound = () => {
+    const audio = new Audio(clickSound);
+    audio.play();
+  };
+
   return (
     <div className="main-containter text-primary bg-black/90 grainy relative overflow-hidden overflow-y-visible">
       <div className="container mx-auto">
@@ -162,7 +169,10 @@ const App = () => {
               <li
                 className="animate-links glow-on-hover"
                 data-link="aboutme"
-                onClick={() => handleScroll("aboutme")}
+                onClick={() => {
+                  playSound();
+                  handleScroll("aboutme");
+                }}
               >
                 ABOUT ME
               </li>
@@ -171,7 +181,10 @@ const App = () => {
               <li
                 className="animate-links"
                 data-link="projects"
-                onClick={() => handleScroll("projects")}
+                onClick={() => {
+                  playSound();
+                  handleScroll("projects");
+                }}
               >
                 PROJECTS
               </li>
@@ -180,7 +193,10 @@ const App = () => {
               <li
                 className="animate-links"
                 data-link="contacts"
-                onClick={() => handleScroll("contacts")}
+                onClick={() => {
+                  playSound();
+                  handleScroll("contacts");
+                }}
               >
                 CONTACTS
               </li>
@@ -224,6 +240,9 @@ const App = () => {
               href="https://github.com/bruce-agaloos"
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => {
+                playSound();
+              }}
             >
               <svg
                 className="w-10 animate-text fill-current inline-block"
@@ -238,6 +257,9 @@ const App = () => {
               href="https://www.linkedin.com/in/agaloos-aaronbruce"
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => {
+                playSound();
+              }}
             >
               <svg
                 className="w-[2.7rem] animate-text glow-on-hover"
