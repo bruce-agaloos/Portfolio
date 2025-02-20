@@ -46,23 +46,7 @@ const App = () => {
 
     gsap.fromTo(
       ".slide-down",
-      { y: "90%", scale: 2 },
-      {
-        y: "0%",
-        scale: 1,
-        ease: "none",
-        scrollTrigger: {
-          trigger: ".image-trigger",
-          start: "top bottom",
-          end: "bottom ",
-          scrub: true,
-        },
-      }
-    );
-
-    gsap.fromTo(
-      ".text-slide",
-      { y: "50%" },
+      { y: "100%", scale: 2 },
       {
         y: "0%",
         scale: 1,
@@ -72,6 +56,48 @@ const App = () => {
           start: "top bottom",
           end: "bottom top",
           scrub: true,
+          onLeave: () => {
+            gsap.to(".slide-down", {
+              y: "-100%",
+              scale: 1,
+              ease: "none",
+              scrollTrigger: {
+                trigger: ".image-trigger2",
+                start: "top bottom",
+                end: "bottom top",
+                scrub: true,
+              },
+            });
+          },
+        },
+      }
+    );
+
+    gsap.fromTo(
+      ".text-slide",
+      { y: "100%" },
+      {
+        y: "0%",
+        scale: 1,
+        ease: "none",
+        scrollTrigger: {
+          trigger: ".image-trigger",
+          start: "top bottom",
+          end: "bottom top",
+          scrub: true,
+          onLeave: () => {
+            gsap.to(".text-slide", {
+              y: "-100%",
+              scale: 1,
+              ease: "none",
+              scrollTrigger: {
+                trigger: ".image-trigger2",
+                start: "top bottom",
+                end: "bottom top",
+                scrub: true,
+              },
+            });
+          },
         },
       }
     );
@@ -162,17 +188,26 @@ const App = () => {
           </ul>
 
           <div className="flex flex-col select-none font-prata sm:leading-45 2xl:leading-70 leading-25 sm:bottom-0 sm:left-0 items-center justify-center sm:absolute sm:pl-5 mt-60 overflow-hidden">
-            <div className="header overflow-hidden">
+            <div
+              className="header overflow-hidden reflection"
+              data-text="AARON"
+            >
               <h1 className="sm:text-[10.8rem] 2xl:text-[16.2rem] text-[5.1rem] animate-text">
                 AARON
               </h1>
             </div>
-            <div className="header overflow-hidden">
+            <div
+              className="header overflow-hidden reflection"
+              data-text="BRUCE"
+            >
               <h1 className="xl:text-[11rem] 2xl:text-[16.8rem] text-[5.4rem] animate-text">
                 BRUCE
               </h1>
             </div>
-            <div className="header overflow-hidden">
+            <div
+              className="header overflow-hidden reflection"
+              data-text="AGALOOS"
+            >
               <h1 className="xl:text-[7.8rem] 2xl:text-[12rem] xl:leading-35 2xl:leading-50 leading-15 text-6xl animate-text">
                 AGALOOS
               </h1>
@@ -182,15 +217,16 @@ const App = () => {
               full-stack developer freelancer
             </span>
           </div>
-          <div className="flex gap-4 right-0 bottom-0 p-5 fixed">
+
+          <div className="flex gap-4 right-0 bottom-0 p-5 fixed items-center z-4">
             <a
-              className="mt-2 overflow-hidden text-white"
+              className="overflow-hidden text-white rounded-full hover:shadow-blue-400 hover:shadow-2xl"
               href="https://github.com/bruce-agaloos"
               target="_blank"
               rel="noopener noreferrer"
             >
               <svg
-                className="w-10 animate-text fill-current inline-block "
+                className="w-10 animate-text fill-current inline-block"
                 viewBox="0 0 16 16"
               >
                 <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path>
@@ -198,17 +234,17 @@ const App = () => {
             </a>
 
             <a
-              className="overflow-hidden"
+              className="overflow-hidden image-trigger rounded-lg mt-1 hover:shadow-blue-400 hover:shadow-2xl"
               href="https://www.linkedin.com/in/agaloos-aaronbruce"
               target="_blank"
               rel="noopener noreferrer"
             >
               <svg
-                className="animate-text"
+                className="w-[2.7rem] animate-text glow-on-hover"
                 xmlns="http://www.w3.org/2000/svg"
-                width="50"
-                height="50"
-                viewBox="0 0 30 20"
+                width="45"
+                height="auto"
+                viewBox="0 0 25 25"
                 style={{ filter: "invert(1)" }}
               >
                 <path
@@ -220,12 +256,10 @@ const App = () => {
           </div>
         </div>
 
-        <div id="aboutme" className="h-screen font-prata p-10">
-          <div className="sm:block hidden 2xl:text-xl image-trigger ">
-            ABOUT ME
-          </div>
+        <div id="aboutme" className="h-screen font-prata p-10 slide-text">
+          <div className="sm:block hidden 2xl:text-xl ">ABOUT ME</div>
           <div className="flex flex-col sm:flex-row items-center justify-center xl:mt-10 xl:gap-20">
-            <div className="z-2 overflow-hidden">
+            <div className="overflow-hidden z-2">
               <img
                 className="h-auto w-[20rem] slide-down 2xl:w-[30rem] object-cover object-top opacity-65"
                 src={profileImage} // Use the imported image
@@ -277,7 +311,7 @@ const App = () => {
         </div>
         <div
           id="projects"
-          className="h-screen font-prata p-10 flex flex-col justify-center"
+          className="h-screen font-prata p-10 flex flex-col justify-center image-trigger2"
         >
           <div className="sm:block hidden">PROJECTS</div>
           <div className="flex flex-col items-center justify-center flex-grow ">
