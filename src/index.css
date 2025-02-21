@@ -126,7 +126,7 @@ body {
   background-image: url("https://upload.wikimedia.org/wikipedia/commons/7/76/1k_Dissolve_Noise_Texture.png");
   animation: grain 1s steps(1) infinite;
   opacity: 0.1;
-  z-index: 1;
+  z-index: 0;
   pointer-events: none;
 }
 
