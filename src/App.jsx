@@ -175,55 +175,48 @@ const App = () => {
 
   return (
     <div className="main-containter text-primary bg-black/90 grainy relative overflow-hidden overflow-y-visible">
-      <div className="container mx-auto">
+      <div id="home" className="h-screen w-screen relative overflow-hidden">
         <NavigationMenu handleScroll={handleScroll} />
         <SocialLinks />
-        <div id="home" className="h-screen relative overflow-hidden">
-          <div className="select-none font-lexend-zetta p-5 pb-0 w-full">
-            <div className="animate-header flex flex-col sm:flex-row items-center w-full text-xs 2xl:text-lg overflow-hidden">
-              <div className="overflow-hidden">
-                <span className="sm:block hidden ">
-                  full-stack web developer freelancer Hello world!
-                </span>
-              </div>
-              <div className="flex-grow ml-2 sm:block hidden sm:mt-0 mt-2 overflow-hidden">
-                <span className="border-b-2 border-[#F0F4F8] w-full block animate-header2"></span>
-              </div>
+        <div className="select-none font-lexend-zetta p-5 pb-0 w-full">
+          <div className="animate-header flex flex-col sm:flex-row items-center w-full text-xs 2xl:text-lg overflow-hidden">
+            <div className="overflow-hidden">
+              <span className="sm:block hidden ">
+                full-stack web developer freelancer Hello world!
+              </span>
             </div>
-          </div>
-
-          <div className="flex flex-col select-none font-prata sm:leading-45 2xl:leading-70 leading-25 sm:bottom-0 sm:left-0 items-center justify-center sm:absolute sm:pl-5 mt-60 overflow-hidden">
-            <div
-              className="header overflow-hidden reflection"
-              data-text="AARON"
-            >
-              <h1 className="xl:text-[10.8rem] 2xl:text-[16.2rem] text-[5.1rem] animate-text">
-                AARON
-              </h1>
+            <div className="flex-grow ml-2 sm:block hidden sm:mt-0 mt-2 overflow-hidden">
+              <span className="border-b-2 border-[#F0F4F8] w-full block animate-header2"></span>
             </div>
-            <div
-              className="header overflow-hidden reflection"
-              data-text="BRUCE"
-            >
-              <h1 className="xl:text-[11rem] 2xl:text-[16.8rem] text-[5.4rem] animate-text">
-                BRUCE
-              </h1>
-            </div>
-            <div
-              className="header overflow-hidden reflection"
-              data-text="AGALOOS"
-            >
-              <h1 className="xl:text-[7.8rem] 2xl:text-[12rem] xl:leading-35 2xl:leading-50 leading-15 text-6xl animate-text">
-                AGALOOS
-              </h1>
-            </div>
-
-            <span className="sm:hidden w-[25rem] block font-lexend-zetta text-xs text-center p-4 animate-text">
-              full-stack web developer freelancer
-            </span>
           </div>
         </div>
 
+        <div className="flex flex-col select-none font-prata sm:leading-45 2xl:leading-70 leading-25 sm:bottom-0 sm:left-0 items-center justify-center sm:absolute sm:pl-5 mt-60 overflow-hidden">
+          <div className="header overflow-hidden reflection" data-text="AARON">
+            <h1 className="xl:text-[10.8rem] 2xl:text-[16.2rem] text-[5.1rem] animate-text">
+              AARON
+            </h1>
+          </div>
+          <div className="header overflow-hidden reflection" data-text="BRUCE">
+            <h1 className="xl:text-[11rem] 2xl:text-[16.8rem] text-[5.4rem] animate-text">
+              BRUCE
+            </h1>
+          </div>
+          <div
+            className="header overflow-hidden reflection"
+            data-text="AGALOOS"
+          >
+            <h1 className="xl:text-[7.8rem] 2xl:text-[12rem] xl:leading-35 2xl:leading-50 leading-15 text-6xl animate-text">
+              AGALOOS
+            </h1>
+          </div>
+
+          <span className="sm:hidden w-[25rem] block font-lexend-zetta text-xs text-center p-4 animate-text">
+            full-stack web developer freelancer
+          </span>
+        </div>
+      </div>
+      <div className="container mx-auto">
         <div id="aboutme" className="h-screen font-prata p-10 slide-text">
           <div className="flex flex-col sm:flex-row items-center justify-center xl:mt-10 xl:gap-20">
             <div className="overflow-hidden z-2">
