@@ -11,7 +11,7 @@ const NavigationMenu = ({ handleScroll }) => {
             handleScroll("aboutme");
           }}
         >
-          ABOUT ME
+          <h2>ABOUT ME</h2>
         </li>
       </div>
       <div className="overflow-hidden glow-on-hover">
@@ -22,7 +22,7 @@ const NavigationMenu = ({ handleScroll }) => {
             handleScroll("projects");
           }}
         >
-          PROJECTS
+          <h2>PROJECTS</h2>
         </li>
       </div>
       <div className="overflow-hidden glow-on-hover">
@@ -33,7 +33,7 @@ const NavigationMenu = ({ handleScroll }) => {
             handleScroll("contacts");
           }}
         >
-          CONTACTS
+          <h2>CONTACTS</h2>
         </li>
       </div>
     </ul>

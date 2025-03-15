@@ -182,7 +182,7 @@ const App = () => {
           <div className="animate-header flex flex-col sm:flex-row items-center w-full text-xs 2xl:text-lg overflow-hidden">
             <div className="overflow-hidden">
               <span className="sm:block hidden ">
-                full-stack web developer freelancer Hello world!
+                <p> full-stack web developer freelancer Hello world!</p>
               </span>
             </div>
             <div className="flex-grow ml-2 sm:block hidden sm:mt-0 mt-2 overflow-hidden">
@@ -212,7 +212,7 @@ const App = () => {
           </div>
 
           <span className="sm:hidden w-[25rem] block font-lexend-zetta text-xs text-center p-4 animate-text">
-            full-stack web developer freelancer
+            <p> full-stack web developer freelancer Hello world!</p>
           </span>
         </div>
       </div>
@@ -263,7 +263,7 @@ const App = () => {
               <br />
               <p className="2xl:text-xl">technologies I use are</p>
               <p className="text-xl 2xl:text-2xl">
-                Larvel React Tailwind MySQL
+                Larvel React Tailwind WordPress MySQL
               </p>
             </div>
           </div>
