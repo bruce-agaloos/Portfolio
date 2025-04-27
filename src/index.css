@@ -12,13 +12,16 @@
 @theme {
   --font-prata: Prata, serif;
   --font-lexend-zetta: LexendZetta, sans-serif;
-  --color-primary: #f0f4f8;
-  --breakpoint-2xl: 90rem;
+  --color-primary: #d1d5db; 
+  --custom-white: #f0f4f8;
+  /* --breakpoint-2xl: 90rem; */
 }
 
 .intro-hidden {
   @apply hidden;
 }
+
+
 
 body {
   overflow-x: hidden;
